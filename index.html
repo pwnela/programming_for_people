@@ -48,56 +48,65 @@
 				</section>
 
 				<section>
-					<h2>So I am going to talk about programming</h2>
+					<h2>Today I am going to talk about programming</h2>
 				</section>
 
         <section>
 					<p>
-            Today you has spent your time learning to comunicate with a
-            computer.
+            You have spent your time here so far learning how to comunicate
+            with computers.
           </p>
-          <img src="http://placekitten.com/800/600" alt="PlaceKitten">
+          <img src="images/responsibility5.png" alt="http://hyperboleandahalf.blogspot.co.nz/2010/06/this-is-why-ill-never-be-adult.html">
 				</section>
 
         <section>
 					<h2>
-            But when you are programming you are not
-            just comunicating with a computer, you are also comunicating
-            with people.
+            But as you learn more about programming it is good to
+            remember that programming is not just for computers.
+          </h2>
+        </section>
+
+        <section>
+          <h2>
+            When you are programming you are also comunicating with people.
           </h2>
 				</section>
 
         <section>
 					<h2>Breif History</h2>
           <aside class="notes">
-            Let me explain with a breif history.
+            So I am just going to take a moment to give a breif history
+            of programming.
           </aside>
 				</section>
 
         <section>
           <p>
-            It used to be very important to comunicate efficiently
-            with a computer.
+            It used to be very important to comunicate as efficiently
+            as possible with a computer.
           </p>
-          <img src="http://placekitten.com/800/600" alt="PlaceKitten">
+          <img src="images/eniac_with_programmers.gif" alt="http://plyojump.com/classes/mainframe_era.php">
+          <aside class="notes">
+            1944 ENIAC, short for Electronic Numerical Integrator And
+            Computer, was the first large-scale, electronic, digital
+            computer capable of being reprogrammed to solve a full range
+            of computing problems. 
+          </aside>
         </section>
 
         <section>
-          <p>
-            But as computers got faster and there was more and more
-            code being written the focus shifted.
-          </p>
-          <p class="fragment">
-            It was also benificial for humans to be able to read code
-            as easly as possible.
-          </p>
+          <h2>
+            But as computers got faster and there was more code to
+            maintain the focus shifted.
+          </h2>
         </section>
 
         <section>
-          <h2>It's all just 1's and 0's!</h2>
+          <h2>Computers are simple, they're just 1's and 0's!</h2>
 					<aside class="notes">
             I'm sure we have all heard this on a bad movie or TV show
-            abouth hackers.
+            about hacks as an explanation of how easy computers are if
+            you know they comunicate in 1's and 0's.
           </aside>
         </section>
 
@@ -105,35 +114,41 @@
           <p>
             See simple...
           </p>
-          <img src="http://placekitten.com/800/600" alt="PlaceKitten">
+          <img src="images/FVFO1F6GLPH1FR4.LARGE.jpg" alt="http://www.instructables.com/id/Learn-Binary-The-easy-way-01000001-00000001/">
+        </section>
+
+        <section>
+          <h2>
+            So back to the real world.
+          </h2>
         </section>
 
         <section>
           <p>
-            So back to the real world.
-          </p>
-          <p class="fragment">
             In 1952 woman named Grace Hopper wrote the first compiler.
-            <img src="http://placekitten.com/800/600" alt="PlaceKitten">
+            <img src="images/Grace_Hopper_and_UNIVAC.jpg" alt="http://en.wikipedia.org/wiki/File:Grace_Hopper_and_UNIVAC.jpg">
           </p>
           <p class="fragment">
             The was the first step in abstraction away from the 1's and
             0's and towards code that was easier for people to read.
           </p>
+          <p class="fragment">
+            (Side note: Grace Hopper was also the person the coined the
+            term <strong>debugging</strong> after finding and removing
+            an actual moth from a computer.)
+          </p>
         </section>
 
         <section>
 					<p>
-            A years and steps later and we now have to programming
-            laguages like Ruby.
+            Fast forward a few years... and now we have programming
+            languages like Ruby.
           </p>
 					<blockquote class="fragment" cite="http://learnruby.com/about-ruby.html">
 						&ldquo;For me, the purpose of life is, at least partly, to
             have joy. Programmers often feel joy when they can
             concentrate on the creative side of programming, so Ruby is
-            designed to make programmers happy. I consider a programming
-            language as a user interface, so it should follow the
-            principles of user interface.&rdquo;
+            designed to make programmers happy.&rdquo;
             -- Yukihiro Matsumoto (a.k.a. “Matz”), 2000
 					</blockquote>
 				</section>
@@ -142,34 +157,67 @@
           <p>
             But even Ruby code can get scarry.
           </p>
-          <pre><code data-trim>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
+          <pre><code class='ruby' data-trim>
+class RobotSearch
+  def find_cupcake(cupcake_x, cupcake_y)
+    @robot_x = 0
+    @robot_y = 0
+    @robot_direction = 0
+    @found_cupcake = false
 
-    var nodes = document.querySelectorAll( selector );
+    6.times do
+      @robot_x += 1
+      @robot_y += 1
+    end
 
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
+    if(@robot_x == cupcake_x && @robot_y == cupcake_y)
+      puts 'You found the cupcake!'
+      @found_cupcake = true
+    end
 
-      if( !node.className ) ) {
-        node.className += ' roll';
-      }
-    };
-  }
-}
+    unless(@found_cupcake)
+      @robot_direction = 90
+    end
+
+    6.times do
+      @robot_x += 1
+      @robot_y += 1
+    end
+
+    if(@robot_x == cupcake_x && @robot_y == cupcake_y)
+      puts 'You found the cupcake!'
+      @found_cupcake = true
+    end
+
+    unless(@found_cupcake)
+      @robot_direction = 90
+    end
+
+    if(found_cupcake)
+      puts "Found cupcate at position #{@robot_x}, #{@robot_y}!"
+    else
+      puts 'I give up.'
+    end
+  end
+end
 					</code></pre>
         </section>
 
         <section>
-          <h2>Before we get into that...</h2>
-          <p>Lets step back for a minuite.</p>
+          <h2>But a computer understands this code fine so why does it matter?</h2>
         </section>
 
         <section>
+          <h2>Well</h2>
 					<ul>
-						<li>We write programs so we can communicate with computers</li>
-						<li class="fragment">But we write these programs for people to use</li>
-						<li class="fragment">Programs are everywhere and need to be keeped up to date</li>
+						<li>We write programs so we can communicate with computers.</li>
+						<li class="fragment">
+              Also, there are programs everywhere and they all need to
+              be keeped up to date.
+            </li>
+            <li class="fragment">
+              But we write these programs for people to use.
+            </li>
           </ul>
         </section>
 
@@ -179,110 +227,537 @@ function linkify( selector ) {
 
         <section>
           <p>Github</p>
-          <img src="http://placekitten.com/800/600" alt="PlaceKitten">
+          <img src="images/sam_github.png" alt="my github">
         </section>
 
         <section>
           <p>Twitter</p>
-          <img src="http://placekitten.com/800/600" alt="PlaceKitten">
+          <img src="images/sam_twitter.png" alt="my twitter">
         </section>
 
         <section>
           <p>
-            And we are all standing on the shoulders of giants when we
-            code.
+            And when it comes to code we are all standing on the
+            shoulders of others.
           </p>
-          <img src="http://placekitten.com/800/600" alt="PlaceKitten">
+          <img src="images/rubygems.png" alt="http://rubygems.org/">
         </section>
 
         <section>
           <h2>
-            So even if you are writing code by yourself you are likely going to
+            So even if you are writing code by yourself you are still going to
             have to read other peoples code
           </h2>
           <p class="fragment">
-            And more than likely others will be reading your code
+            And more than likely other people will also be reading your code
           </p>
-        </section>
-
-				<section>
-					<p>
+					<p class="fragment">
 						So now more than ever you are writing code for
             <strong>people</strong>.
 					</p>
-				</section>
-        
+        </section>
+
         <section>
           <h2>So how do we code for people?</h2>
         </section>
 
         <section>
           <h2>Object Oriented Programming</h2>
-          <p>You have been doing this already in Rails, yay!</p>
-          <ul>
-            <li class="fragment">When we write objects the goal is to make sure they only do 1 thing</li>
-            <li class="fragment">When they try to do more than one thing</li>
-          </ul>
+          <p>You have been using this already in Rails, yay!</p>
+          <p class="fragment">
+            When we write objects the goal is to make
+            sure they only do 1 thing
+          </p>
+          <p class="fragment">When they try to do more than one thing</p>
         </section>
 
 				<section>
 					<p>
 						Then this happens.
 					</p>
-          <img src="http://placekitten.com/800/600" alt="PlaceKitten">
+          <pre><code class='ruby' data-trim>
+class RobotSearch
+  def find_cupcake(cupcake_x, cupcake_y)
+    @robot_x = 0
+    @robot_y = 0
+    @robot_direction = 0
+    @found_cupcake = false
+
+    6.times do
+      @robot_x += 1
+      @robot_y += 1
+    end
+
+    if(@robot_x == cupcake_x && @robot_y == cupcake_y)
+      puts 'You found the cupcake!'
+      @found_cupcake = true
+    end
+
+    unless(@found_cupcake)
+      @robot_direction = 90
+    end
+
+    6.times do
+      @robot_x += 1
+      @robot_y += 1
+    end
+
+    if(@robot_x == cupcake_x && @robot_y == cupcake_y)
+      puts 'You found the cupcake!'
+      @found_cupcake = true
+    end
+
+    unless(@found_cupcake)
+      @robot_direction = 90
+    end
+
+    if(found_cupcake)
+      puts "Found cupcate at position #{@robot_x}, #{@robot_y}!"
+    else
+      puts 'I give up.'
+    end
+  end
+end
+					</code></pre>
 				</section>
 
 				<section>
 					<h2>A programmer named Sandi Metz proposed 4 rules to help with this</h2>
-          <ol class="fragment">
-            <li>Your class can be no longer than 100 lines of code.</li>
-            <li>Your methods can be no longer than 5 lines of code.</li>
-            <li>You can pass no more than 4 parameters and you can’t just make it one big hash.</li>
-            <li>
+          <ol>
+            <li class="fragment">Your class can be no longer than 100 lines of code.</li>
+            <li class="fragment">Your methods can be no longer than 5 lines of code.</li>
+            <li class="fragment">You can pass no more than 4 parameters and you can’t just make it one big hash.</li>
+            <li class="fragment">
               When a call comes into your Rails controller, you can
               only instantiate 1 object to do whatever it is that needs to be done.
             </li>
           </ol>
 				</section>
 
-				<section>
-					<h2>
-            We are going to use rule #2 to fix the unreadable code to
-            make ie more readable to people.
+        <section>
+          <h2>
+            But don't worry if you didn't get all of that.
           </h2>
         </section>
 
-        <section>
-          <h2>
-            Your methods can be no longer than 5 lines of code.
+				<section>
+					<h2>
+            We are just going to use rule #2 to help fix the large
+            messy code I showed you earlier.
           </h2>
+          <p class="fragment">
+            Your methods can be no longer than 5 lines of code.
+          </p>
+        </section>
+
+        <section>
+          <pre><code class='ruby' data-trim>
+class RobotSearch
+  def find_cupcake(cupcake_x, cupcake_y)
+    @robot_x = 0
+    @robot_y = 0
+    @robot_direction = 0
+    @found_cupcake = false
+
+    6.times do
+      @robot_x += 1
+      @robot_y += 1
+    end
+
+    if(@robot_x == cupcake_x && @robot_y == cupcake_y)
+      puts 'You found the cupcake!'
+      @found_cupcake = true
+    end
+
+    unless(@found_cupcake)
+      @robot_direction = 90
+    end
+
+    6.times do
+      @robot_x += 1
+      @robot_y += 1
+    end
+
+    if(@robot_x == cupcake_x && @robot_y == cupcake_y)
+      puts 'You found the cupcake!'
+      @found_cupcake = true
+    end
+
+    unless(@found_cupcake)
+      @robot_direction = 90
+    end
+
+    if(found_cupcake)
+      puts "Found cupcate at position #{@robot_x}, #{@robot_y}!"
+    else
+      puts 'I give up.'
+    end
+  end
+end
+					</code></pre>
+          <aside class="notes">
+            Just a warning the code might look a little scarrier before
+            it looks better. :)
+          </aside>
 				</section>
 
         <section>
-          <img src="http://placekitten.com/800/600" alt="PlaceKitten">
+          <pre><code class='ruby' data-trim>
+class RobotSearch
+  def find_cupcake(cupcake_x, cupcake_y)
+    put_robot_at_starting_point
+
+    6.times do
+      @robot_x += i
+      @robot_y += i
+    end
+
+    if(@robot_x == cupcake_x && @robot_y == cupcake_y)
+      puts 'You found the cupcake!'
+      @found_cupcake = true
+    end
+
+    unless(@found_cupcake)
+      @robot_direction = 90
+    end
+
+    6.times do
+      @robot_x += 1
+      @robot_y += 1
+    end
+
+    if(@robot_x == cupcake_x && @robot_y == cupcake_y)
+      puts 'You found the cupcake!'
+      @found_cupcake = true
+    end
+
+    unless(@found_cupcake)
+      @robot_direction = 90
+    end
+
+    if(found_cupcake)
+      puts "Found cupcate at position #{@robot_x}, #{@robot_y}!"
+    else
+      puts 'I give up.'
+    end
+  end
+
+  def put_robot_at_starting_point
+    @robot_x = 0
+    @robot_y = 0
+    @robot_direction = 0
+    @found_cupcake = false
+  end
+end
+					</code></pre>
+				</section>
+
+        <section>
+          <pre><code class='ruby' data-trim>
+class RobotSearch
+  def find_cupcake(cupcake_x, cupcake_y)
+    put_robot_at_starting_point
+    walk_forward_steps(6)
+
+    if(@robot_x == cupcake_x && @robot_y == cupcake_y)
+      puts 'You found the cupcake!'
+      @found_cupcake = true
+    end
+
+    unless(@found_cupcake)
+      @robot_direction = 90
+    end
+
+    walk_forward_steps(6)
+
+    if(@robot_x == cupcake_x && @robot_y == cupcake_y)
+      puts 'You found the cupcake!'
+      @found_cupcake = true
+    end
+
+    unless(@found_cupcake)
+      @robot_direction = 90
+    end
+
+    if(found_cupcake)
+      puts "Found cupcate at position #{@robot_x}, #{@robot_y}!"
+    else
+      puts 'I give up.'
+    end
+  end
+
+  def walk_forward_steps(number_of_steps)
+    number_of_steps.times do
+      @robot_x += 1
+      @robot_y += 1
+    end
+  end
+
+  def put_robot_at_starting_point
+    @robot_x = 0
+    @robot_y = 0
+    @robot_direction = 0
+    @found_cupcake = false
+  end
+end
+					</code></pre>
+				</section>
+
+        <section>
+          <pre><code class='ruby' data-trim>
+class RobotSearch
+  def find_cupcake(cupcake_x, cupcake_y)
+    put_robot_at_starting_point
+    walk_forward_steps(6)
+    check_if_found_cupcake?(cupcake_x, cupcake_y)
+
+    unless(@found_cupcake)
+      @robot_direction = 90
+    end
+
+    walk_forward_steps(6)
+    check_if_found_cupcake?(cupcake_x, cupcake_y)
+
+    unless(@found_cupcake)
+      @robot_direction = 90
+    end
+
+    if(found_cupcake)
+      puts "Found cupcate at position #{@robot_x}, #{@robot_y}!"
+    else
+      puts 'I give up.'
+    end
+  end
+
+  def check_if_found_cupcake?(cupcake_x, cupcake_y)
+    if(@robot_x == cupcake_x && @robot_y == cupcake_y)
+      puts 'You found the cupcake!'
+      @found_cupcake = true
+    end
+  end
+
+  def walk_forward_steps(number_of_steps)
+    number_of_steps.times do
+      @robot_x += 1
+      @robot_y += 1
+    end
+  end
+
+  def put_robot_at_starting_point
+    @robot_x = 0
+    @robot_y = 0
+    @robot_direction = 0
+    @found_cupcake = false
+  end
+end
+					</code></pre>
+				</section>
+
+        <section>
+          <pre><code class='ruby' data-trim>
+class RobotSearch
+  def find_cupcake(cupcake_x, cupcake_y)
+    put_robot_at_starting_point
+    walk_forward_steps(6)
+    check_if_found_cupcake?(cupcake_x, cupcake_y)
+    turn_right
+    walk_forward_steps(6)
+    check_if_found_cupcake?(cupcake_x, cupcake_y)
+    turn_right
+
+    if(found_cupcake)
+      puts "Found cupcate at position #{@robot_x}, #{@robot_y}!"
+    else
+      puts 'I give up.'
+    end
+  end
+
+  def turn_right
+    unless(@found_cupcake)
+      @robot_direction = 90
+    end
+  end
+
+  def check_if_found_cupcake?(cupcake_x, cupcake_y)
+    if(@robot_x == cupcake_x && @robot_y == cupcake_y)
+      puts 'You found the cupcake!'
+      @found_cupcake = true
+    end
+  end
+
+  def walk_forward_steps(number_of_steps)
+    number_of_steps.times do
+      @robot_x += 1
+      @robot_y += 1
+    end
+  end
+
+  def put_robot_at_starting_point
+    @robot_x = 0
+    @robot_y = 0
+    @robot_direction = 0
+    @found_cupcake = false
+  end
+end
+					</code></pre>
+				</section>
+
+        <section>
+          <pre><code class='ruby' data-trim>
+class RobotSearch
+  def find_cupcake(cupcake_x, cupcake_y)
+    put_robot_at_starting_point
+    walk_forward_steps(6)
+    check_if_found_cupcake?(cupcake_x, cupcake_y)
+    turn_right
+    walk_forward_steps(6)
+    check_if_found_cupcake?(cupcake_x, cupcake_y)
+    turn_right
+    yay_found?(found)
+  end
+
+  def yay_found?(found)
+    if(found_cupcake)
+      puts "Found cupcate at position #{@robot_x}, #{@robot_y}!"
+    else
+      puts 'I give up.'
+    end
+  end
+
+  def turn_right
+    unless(@found_cupcake)
+      @robot_direction = 90
+    end
+  end
+
+  def check_if_found_cupcake?(cupcake_x, cupcake_y)
+    if(@robot_x == cupcake_x && @robot_y == cupcake_y)
+      puts 'You found the cupcake!'
+      @found_cupcake = true
+    end
+  end
+
+  def walk_forward_steps(number_of_steps)
+    number_of_steps.times do
+      @robot_x += 1
+      @robot_y += 1
+    end
+  end
+
+  def put_robot_at_starting_point
+    @robot_x = 0
+    @robot_y = 0
+    @robot_direction = 0
+    @found_cupcake = false
+  end
+end
+					</code></pre>
+				</section>
+
+        <section>
+          <pre><code class='ruby' data-trim>
+class RobotSearch
+  def find_cupcake(cupcake_x, cupcake_y)
+    put_robot_at_starting_point
+    search
+    search
+    yay_found?(found)
+  end
+
+  def search
+    walk_forward_steps(6)
+    check_if_found_cupcake?(cupcake_x, cupcake_y)
+    turn_right
+  end
+
+  def yay_found?(found)
+    if(found_cupcake)
+      puts "Found cupcate at position #{@robot_x}, #{@robot_y}!"
+    else
+      puts 'I give up.'
+    end
+  end
+
+  def turn_right
+    unless(@found_cupcake)
+      @robot_direction = 90
+    end
+  end
+
+  def check_if_found_cupcake?(cupcake_x, cupcake_y)
+    if(@robot_x == cupcake_x && @robot_y == cupcake_y)
+      puts 'You found the cupcake!'
+      @found_cupcake = true
+    end
+  end
+
+  def walk_forward_steps(number_of_steps)
+    number_of_steps.times do
+      @robot_x += 1
+      @robot_y += 1
+    end
+  end
+
+  def put_robot_at_starting_point
+    @robot_x = 0
+    @robot_y = 0
+    @robot_direction = 0
+    @found_cupcake = false
+  end
+end
+					</code></pre>
+				</section>
+
+                <section>
+          <pre><code class='ruby' data-trim>
+class RobotSearch
+  def find_cupcake(cupcake_x, cupcake_y)
+    put_robot_at_starting_point
+    search
+    search
+    yay_found?(found)
+  end
+
+  def search
+    walk_forward_steps(6)
+    check_if_found_cupcake?(cupcake_x, cupcake_y)
+    turn_right
+  end
+end
+					</code></pre>
           <aside class="notes">
             As you can see our code is not much easier to digest.
             It almost has a naritive when you read it
             The next programmer that reads your code will likely thank you for
             your small methods. Maybe even give you a hug!
           </aside>
-        </section>
+				</section>
 
         <section>
-          <img src="http://placekitten.com/800/600" alt="PlaceKitten">
+          <img src="images/fridayhug.png" alt="http://fridayhug.com/">
         </section>
 
         <section>
           <h2>Thank you for your time</h2>
         </section>
 
-				<section data-markdown>
+				<section>
           <p>
-            Talk inspired by Sandi Metz (@sandimetz), Katrina Owen (@kytrinyx), and Avdi Grimm (@avdi)
+            Talk inspired by Sandi Metz (<a href="https://twitter.com/sandimetz">@sandimetz</a>),
+            Katrina Owen (<a href="https://twitter.com/kytrinyx">@kytrinyx</a>),
+            and Avdi Grimm (<a href="https://twitter.com/avdi">@avdi</a>)
           </p>
           <p>
-            You can find me on Twitter @ootoovak, on Github at https://github.com/ootoovak and these slides on Speaker Deck here https://speakerdeck.com/ootoovak
+            You can find me on Twitter <a href="https://twitter.com/ootoovak">@ootoovak</a>,
+            on Github at <a href="https://github.com/ootoovak">https://github.com/ootoovak</a> and
+            these slides on Speaker Deck here <a href="https://speakerdeck.com/ootoovak">https://speakerdeck.com/ootoovak</a>
           </p>
+          <img class="fragment" src="http://placekitten.com/800/600" alt="PlaceKitten">
+          <aside class="notes">
+            When I did a trial run of the talk I used this picture from
+            placekitten.com as a place holder. It was requested I keep
+            in in somewhere.
+          </aside>
 				</section>
 
 			</div>
@@ -300,7 +775,7 @@ function linkify( selector ) {
 				controls: true,
 				progress: true,
 				history: true,
-				center: true,
+				center: false,
         rollingLinks: false,
 
 				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme

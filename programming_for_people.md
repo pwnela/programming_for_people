@@ -18,6 +18,7 @@ Programming for People
 - Ruby is a great example of this
 - But lets not kid ourselves
 - This [show scary method] is not that easy to read
+
 - Lets step back for a minute
 - We write programs so we can communicate with computers
 - But we write these programs to people to use
@@ -29,11 +30,13 @@ Programming for People
 - And more than likely others will be reading your code
 - We have got to the point where it is way more important for your code
   to be for people than for it to be for machines
+
 - So how do we code for people?
 - Object Oriented programing helps us keep our code organised
 - When we write objects the goal is to make sure they only do 1 thing
 - When they try to do more than one thing
 - This happens [show scary code again]
+
 - A woman named Sandi Metz has proposed 4 rules to help with this
 - [show 4 rules: https://gist.github.com/henrik/4509394]
 - I am going to use 1 of them to make this scarry code
@@ -47,5 +50,6 @@ Programming for People
 - The next programmer that reads your code will likely thank you for
   your small methods. Maybe even give you a hug! #FridayHug
 - Thank you for your time
+
 - Talk inspired by Sandi Metz (@sandimetz), Katrina Owen (@kytrinyx), and Avdi Grimm (@avdi)
 - You can find me on Twitter @ootoovak, on Github at https://github.com/ootoovak and these slides on Speaker Deck here https://speakerdeck.com/ootoovak

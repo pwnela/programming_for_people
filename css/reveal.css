@@ -303,7 +303,7 @@ body {
 .reveal pre code {
 	padding: 5px;
 	overflow: auto;
-	max-height: 400px;
+	max-height: 95%;
 	word-wrap: normal;
 }
 
@@ -642,7 +642,7 @@ body {
 
 .reveal .slides>section {
 	left: -50%;
-	top: -50%;
+	top: -60%;
 }
 
 .reveal .slides>section.stack {
