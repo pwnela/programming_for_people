@@ -659,12 +659,12 @@ end
 class RobotSearch
   def find_cupcake(cupcake_x, cupcake_y)
     put_robot_at_starting_point
-    search
-    search
+    search(cupcake_x, cupcake_y)
+    search(cupcake_x, cupcake_y)
     yay_found?(found)
   end
 
-  def search
+  def search(cupcake_x, cupcake_y)
     walk_forward_steps(6)
     check_if_found_cupcake?(cupcake_x, cupcake_y)
     turn_right
@@ -713,12 +713,14 @@ end
 class RobotSearch
   def find_cupcake(cupcake_x, cupcake_y)
     put_robot_at_starting_point
-    search
-    search
+
+    search(cupcake_x, cupcake_y)
+    search(cupcake_x, cupcake_y)
+
     yay_found?(found)
   end
 
-  def search
+  def search(cupcake_x, cupcake_y)
     walk_forward_steps(6)
     check_if_found_cupcake?(cupcake_x, cupcake_y)
     turn_right
