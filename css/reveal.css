@@ -201,8 +201,8 @@ body {
 .reveal img,
 .reveal video,
 .reveal iframe {
-	max-width: 95%;
-	max-height: 95%;
+	max-width: 85%;
+	max-height: 85%;
 }
 
 /** Prevents layering issues in certain browser/transition combinations */
@@ -286,7 +286,7 @@ body {
 	display: block;
 	position: relative;
 	width: 90%;
-	margin: 15px auto;
+	margin: -70px auto 15px;
 
 	text-align: left;
 	font-size: 0.55em;
@@ -642,7 +642,7 @@ body {
 
 .reveal .slides>section {
 	left: -50%;
-	top: -60%;
+	top:  -60%;
 }
 
 .reveal .slides>section.stack {

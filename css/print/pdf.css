@@ -115,7 +115,7 @@ ul, ol, div, p {
 	visibility: visible !important;
 	position: static !important;
 	width: 100% !important;
-	height: auto !important;
+	height: 70% !important;
 	min-height: initial !important;
 	display: block !important;
 	overflow: visible !important;
@@ -161,4 +161,9 @@ ul, ol, div, p {
 }
 .reveal small a {
 	font-size: 16pt !important;
+}
+
+.reveal pre code {
+	font-size: 0.85em;
+	line-height: 1.1em;
 }
