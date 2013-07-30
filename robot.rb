@@ -1,3 +1,5 @@
+require 'rspec'
+
 class RobotSearch
   def find_cupcake(cx, cy)
     @x = 0
@@ -38,9 +40,22 @@ class RobotSearch
     else
       puts 'I give up.'
     end
+
+    @f
   end
 end
 
+describe 'RobotSearch' do
+  it "finds a cupcake if cupcake is in robot's path" do
+    robot_search = RobotSearch.new
+    robot_search.find_cupcake(6, 6).should be_true
+  end
+
+  it "does not find a cupcake if cupcake is not in robot's path" do
+    robot_search = RobotSearch.new
+    robot_search.find_cupcake(2, 2).should be_false
+  end 
+end
 
 class RobotSearch
   def find_cupcake(cupcake_x, cupcake_y)
@@ -77,22 +92,36 @@ class RobotSearch
       @robot_direction = 90
     end
 
-    if(found_cupcake)
+    if(@found_cupcake)
       puts "Found cupcate at position #{@robot_x}, #{@robot_y}!"
     else
       puts 'I give up.'
     end
+
+    @found_cupcake
   end
+
 end
 
+describe 'RobotSearch' do
+  it "finds a cupcake if cupcake is in robot's path" do
+    robot_search = RobotSearch.new
+    robot_search.find_cupcake(6, 6).should be_true
+  end
+
+  it "does not find a cupcake if cupcake is not in robot's path" do
+    robot_search = RobotSearch.new
+    robot_search.find_cupcake(2, 2).should be_false
+  end 
+end
 
 class RobotSearch
   def find_cupcake(cupcake_x, cupcake_y)
     put_robot_at_starting_point
 
     6.times do
-      @robot_x += i
-      @robot_y += i
+      @robot_x += 1
+      @robot_y += 1
     end
 
     if(@robot_x == cupcake_x && @robot_y == cupcake_y)
@@ -118,11 +147,13 @@ class RobotSearch
       @robot_direction = 90
     end
 
-    if(found_cupcake)
+    if(@found_cupcake)
       puts "Found cupcate at position #{@robot_x}, #{@robot_y}!"
     else
       puts 'I give up.'
     end
+
+    @found_cupcake
   end
 
   def put_robot_at_starting_point
@@ -133,6 +164,17 @@ class RobotSearch
   end
 end
 
+describe 'RobotSearch' do
+  it "finds a cupcake if cupcake is in robot's path" do
+    robot_search = RobotSearch.new
+    robot_search.find_cupcake(6, 6).should be_true
+  end
+
+  it "does not find a cupcake if cupcake is not in robot's path" do
+    robot_search = RobotSearch.new
+    robot_search.find_cupcake(2, 2).should be_false
+  end 
+end
 
 class RobotSearch
   def find_cupcake(cupcake_x, cupcake_y)
@@ -159,11 +201,13 @@ class RobotSearch
       @robot_direction = 90
     end
 
-    if(found_cupcake)
+    if(@found_cupcake)
       puts "Found cupcate at position #{@robot_x}, #{@robot_y}!"
     else
       puts 'I give up.'
     end
+
+    @found_cupcake
   end
 
   def walk_forward_steps(number_of_steps)
@@ -181,6 +225,17 @@ class RobotSearch
   end
 end
 
+describe 'RobotSearch' do
+  it "finds a cupcake if cupcake is in robot's path" do
+    robot_search = RobotSearch.new
+    robot_search.find_cupcake(6, 6).should be_true
+  end
+
+  it "does not find a cupcake if cupcake is not in robot's path" do
+    robot_search = RobotSearch.new
+    robot_search.find_cupcake(2, 2).should be_false
+  end 
+end
 
 class RobotSearch
   def find_cupcake(cupcake_x, cupcake_y)
@@ -199,11 +254,13 @@ class RobotSearch
       @robot_direction = 90
     end
 
-    if(found_cupcake)
+    if(@found_cupcake)
       puts "Found cupcate at position #{@robot_x}, #{@robot_y}!"
     else
       puts 'I give up.'
     end
+
+    @found_cupcake
   end
 
   def check_if_found_cupcake?(cupcake_x, cupcake_y)
@@ -228,6 +285,17 @@ class RobotSearch
   end
 end
 
+describe 'RobotSearch' do
+  it "finds a cupcake if cupcake is in robot's path" do
+    robot_search = RobotSearch.new
+    robot_search.find_cupcake(6, 6).should be_true
+  end
+
+  it "does not find a cupcake if cupcake is not in robot's path" do
+    robot_search = RobotSearch.new
+    robot_search.find_cupcake(2, 2).should be_false
+  end 
+end
 
 class RobotSearch
   def find_cupcake(cupcake_x, cupcake_y)
@@ -239,11 +307,13 @@ class RobotSearch
     check_if_found_cupcake?(cupcake_x, cupcake_y)
     turn_right
 
-    if(found_cupcake)
+    if(@found_cupcake)
       puts "Found cupcate at position #{@robot_x}, #{@robot_y}!"
     else
       puts 'I give up.'
     end
+
+    @found_cupcake
   end
 
   def turn_right
@@ -274,6 +344,17 @@ class RobotSearch
   end
 end
 
+describe 'RobotSearch' do
+  it "finds a cupcake if cupcake is in robot's path" do
+    robot_search = RobotSearch.new
+    robot_search.find_cupcake(6, 6).should be_true
+  end
+
+  it "does not find a cupcake if cupcake is not in robot's path" do
+    robot_search = RobotSearch.new
+    robot_search.find_cupcake(2, 2).should be_false
+  end 
+end
 
 class RobotSearch
   def find_cupcake(cupcake_x, cupcake_y)
@@ -284,15 +365,16 @@ class RobotSearch
     walk_forward_steps(6)
     check_if_found_cupcake?(cupcake_x, cupcake_y)
     turn_right
-    yay_found?(found)
+    yay_found?
   end
 
-  def yay_found?(found)
-    if(found_cupcake)
+  def yay_found?
+    if(@found_cupcake)
       puts "Found cupcate at position #{@robot_x}, #{@robot_y}!"
     else
       puts 'I give up.'
     end
+    @found_cupcake
   end
 
   def turn_right
@@ -323,27 +405,39 @@ class RobotSearch
   end
 end
 
+describe 'RobotSearch' do
+  it "finds a cupcake if cupcake is in robot's path" do
+    robot_search = RobotSearch.new
+    robot_search.find_cupcake(6, 6).should be_true
+  end
+
+  it "does not find a cupcake if cupcake is not in robot's path" do
+    robot_search = RobotSearch.new
+    robot_search.find_cupcake(2, 2).should be_false
+  end 
+end
 
 class RobotSearch
   def find_cupcake(cupcake_x, cupcake_y)
     put_robot_at_starting_point
-    search
-    search
-    yay_found?(found)
+    search(cupcake_x, cupcake_y)
+    search(cupcake_x, cupcake_y)
+    yay_found?
   end
 
-  def search
+  def search(cupcake_x, cupcake_y)
     walk_forward_steps(6)
     check_if_found_cupcake?(cupcake_x, cupcake_y)
     turn_right
   end
 
-  def yay_found?(found)
-    if(found_cupcake)
+  def yay_found?
+    if(@found_cupcake)
       puts "Found cupcate at position #{@robot_x}, #{@robot_y}!"
     else
       puts 'I give up.'
     end
+    @found_cupcake
   end
 
   def turn_right
@@ -372,4 +466,16 @@ class RobotSearch
     @robot_direction = 0
     @found_cupcake = false
   end
+end
+
+describe 'RobotSearch' do
+  it "finds a cupcake if cupcake is in robot's path" do
+    robot_search = RobotSearch.new
+    robot_search.find_cupcake(6, 6).should be_true
+  end
+
+  it "does not find a cupcake if cupcake is not in robot's path" do
+    robot_search = RobotSearch.new
+    robot_search.find_cupcake(2, 2).should be_false
+  end 
 end

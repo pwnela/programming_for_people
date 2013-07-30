@@ -193,12 +193,15 @@ class RobotSearch
       @robot_direction = 90
     end
 
-    if(found_cupcake)
+    if(@found_cupcake)
       puts "Found cupcate at position #{@robot_x}, #{@robot_y}!"
     else
       puts 'I give up.'
     end
+
+    @found_cupcake
   end
+
 end
 					</code></pre>
         </section>
@@ -311,12 +314,15 @@ class RobotSearch
       @robot_direction = 90
     end
 
-    if(found_cupcake)
+    if(@found_cupcake)
       puts "Found cupcate at position #{@robot_x}, #{@robot_y}!"
     else
       puts 'I give up.'
     end
+
+    @found_cupcake
   end
+
 end
 					</code></pre>
 				</section>
@@ -387,12 +393,15 @@ class RobotSearch
       @robot_direction = 90
     end
 
-    if(found_cupcake)
+    if(@found_cupcake)
       puts "Found cupcate at position #{@robot_x}, #{@robot_y}!"
     else
       puts 'I give up.'
     end
+
+    @found_cupcake
   end
+
 end
 					</code></pre>
           <aside class="notes">
@@ -408,8 +417,8 @@ class RobotSearch
     put_robot_at_starting_point
 
     6.times do
-      @robot_x += i
-      @robot_y += i
+      @robot_x += 1
+      @robot_y += 1
     end
 
     if(@robot_x == cupcake_x && @robot_y == cupcake_y)
@@ -435,11 +444,13 @@ class RobotSearch
       @robot_direction = 90
     end
 
-    if(found_cupcake)
+    if(@found_cupcake)
       puts "Found cupcate at position #{@robot_x}, #{@robot_y}!"
     else
       puts 'I give up.'
     end
+
+    @found_cupcake
   end
 
   def put_robot_at_starting_point
@@ -479,11 +490,13 @@ class RobotSearch
       @robot_direction = 90
     end
 
-    if(found_cupcake)
+    if(@found_cupcake)
       puts "Found cupcate at position #{@robot_x}, #{@robot_y}!"
     else
       puts 'I give up.'
     end
+
+    @found_cupcake
   end
 
   def walk_forward_steps(number_of_steps)
@@ -522,11 +535,13 @@ class RobotSearch
       @robot_direction = 90
     end
 
-    if(found_cupcake)
+    if(@found_cupcake)
       puts "Found cupcate at position #{@robot_x}, #{@robot_y}!"
     else
       puts 'I give up.'
     end
+
+    @found_cupcake
   end
 
   def check_if_found_cupcake?(cupcake_x, cupcake_y)
@@ -565,11 +580,13 @@ class RobotSearch
     check_if_found_cupcake?(cupcake_x, cupcake_y)
     turn_right
 
-    if(found_cupcake)
+    if(@found_cupcake)
       puts "Found cupcate at position #{@robot_x}, #{@robot_y}!"
     else
       puts 'I give up.'
     end
+
+    @found_cupcake
   end
 
   def turn_right
@@ -613,15 +630,16 @@ class RobotSearch
     walk_forward_steps(6)
     check_if_found_cupcake?(cupcake_x, cupcake_y)
     turn_right
-    yay_found?(found)
+    yay_found?
   end
 
-  def yay_found?(found)
-    if(found_cupcake)
+  def yay_found?
+    if(@found_cupcake)
       puts "Found cupcate at position #{@robot_x}, #{@robot_y}!"
     else
       puts 'I give up.'
     end
+    @found_cupcake
   end
 
   def turn_right
@@ -661,7 +679,7 @@ class RobotSearch
     put_robot_at_starting_point
     search(cupcake_x, cupcake_y)
     search(cupcake_x, cupcake_y)
-    yay_found?(found)
+    yay_found?
   end
 
   def search(cupcake_x, cupcake_y)
@@ -670,12 +688,13 @@ class RobotSearch
     turn_right
   end
 
-  def yay_found?(found)
-    if(found_cupcake)
+  def yay_found?
+    if(@found_cupcake)
       puts "Found cupcate at position #{@robot_x}, #{@robot_y}!"
     else
       puts 'I give up.'
     end
+    @found_cupcake
   end
 
   def turn_right
@@ -715,7 +734,7 @@ class RobotSearch
     put_robot_at_starting_point
     search(cupcake_x, cupcake_y)
     search(cupcake_x, cupcake_y)
-    yay_found?(found)
+    yay_found?
   end
 
   def search(cupcake_x, cupcake_y)
