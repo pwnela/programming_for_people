@@ -412,6 +412,23 @@ end
 
         <section>
           <pre><code class='ruby' data-trim>
+# These specs must continue to pass throughout the refactor
+describe 'RobotSearch' do
+  it "finds a cupcake if cupcake is in robot's path" do
+    robot_search = RobotSearch.new
+    robot_search.find_cupcake(6, 6).should be_true
+  end
+
+  it "does not find a cupcake if cupcake is not in robot's path" do
+    robot_search = RobotSearch.new
+    robot_search.find_cupcake(2, 2).should be_false
+  end 
+end
+          </code></pre>
+        </section>
+
+        <section>
+          <pre><code class='ruby' data-trim>
 class RobotSearch
   def find_cupcake(cupcake_x, cupcake_y)
     put_robot_at_starting_point
